@@ -14,10 +14,10 @@ jobs:
     steps:
       # Checkout the code as the first step.
       - checkout
-      # Use mvn clean and package as the standard maven build phase
+      # Use mvn clean and install as the standard maven build phase
       - run:
           name: Build
-          command: mvn -B package -DskipTests
+          command: mvn clean install -DskipTests
           
       #Get the Nexus IQ CLI jar
       - run:
