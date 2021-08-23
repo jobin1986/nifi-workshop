@@ -16,9 +16,8 @@ jobs:
       - checkout
       # Use mvn clean and package as the standard maven build phase
       - run:
-          name: install 
-          command: mvn clean install    
-
+          name: Build
+          command: mvn -B package -DskipTests
       - run:
           name: Get_IQ 
           command: curl -L -f -o /tmp/nexus-iq-cli-latest.jar https://download.sonatype.com/clm/scanner/latest.jar    
