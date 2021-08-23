@@ -18,6 +18,8 @@ jobs:
       - run:
           name: Build
           command: mvn -B package -DskipTests
+          
+      #Get the Nexus IQ CLI jar
       - run:
           name: Get_IQ 
           command: curl -L -f -o /tmp/nexus-iq-cli-latest.jar https://download.sonatype.com/clm/scanner/latest.jar    
